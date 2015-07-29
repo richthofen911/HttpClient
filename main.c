@@ -1,14 +1,9 @@
 #include <stdio.h>
 #include <sys/socket.h>
-#include <sys/types.h>
-#include <time.h>
 #include <errno.h>
-#include <signal.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <sys/wait.h>
-#include <sys/time.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
@@ -20,7 +15,7 @@ int main(int argc, char **argv) {
     int sockfd, ret, i, h;
     struct sockaddr_in servaddr;
     char str1[4096], buf[BUFSIZE];
-    socklen_t len;
+    /*socklen_t len;*/
     fd_set   t_set1;
     struct timeval  tv;
 
